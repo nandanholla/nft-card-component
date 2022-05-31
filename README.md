@@ -28,6 +28,11 @@ Users should be able to:
 ![Mobile Screenshot](assets/screenshot/mobile.png "Mobile screenshot")
 ![Active state Screenshot](assets/screenshot/active-state.png "Active state screenshot")
 
+### Links
+
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/nft-card-component-using-css-flexbox-klxjrOBUEK)
+- Live Site URL: [GitHub Pages](https://nandanholla.github.io/nft-card-component/)
+
 ## Built with
 
 - HTML5
