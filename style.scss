@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+$Outfit: 'Outfit', sans-serif;
+
+$coltBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+$main-bg: hsl(217, 54%, 11%);
+$card-bg: hsl(215, 51%, 16%);
+$line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin svg {
+    height: 18px;
+    object-fit: cover;
+}
+
+@mixin hover {
+    color: $cyan;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $coltBlue;
+}
+
+body {
+    font-family: $Outfit;
+    font-size: 18px;
+    font-weight: 400;
+
+    background-color: $main-bg;
+    color: $white;
+
+    @include flexbox();
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    width: 320px;
+    height: 520px;
+
+    background-color: $card-bg;
+    border-radius: 10px;
+    box-shadow:
+        0 30px 0 15px rgb(13, 22, 41), 
+        0 30px 0 50px rgb(12, 24, 44);
+
+    padding: 1.5rem;
+    margin: 2rem;
+    
+    .showcase {
+        position: relative;
+        @include flexbox();
+
+        .card-image {
+            width: 100%;
+            border-radius: 5px;
+            z-index: 0;
+        }
+
+        span {
+            border-radius: 5px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($cyan, 0.5);
+            display: none;
+        }
+
+        &:hover span, &:active span {
+            cursor: pointer;
+            @include flexbox();
+        }
+
+    }
+
+    .title {
+        font-weight: 600;
+        margin: 1rem 0;
+        font-size: 1.3rem;
+
+        &:hover {
+            @include hover();
+        }
+    }
+
+    .card-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        border-bottom: 2px solid $line;
+
+        .price {
+            @include flexbox();
+    
+            img {
+                @include svg();
+                margin-right: 0.5rem;
+            }
+    
+            h3 {
+                color: $cyan;
+                font-weight: 400;
+                font-size: 0.9rem
+            }
+        }
+    
+        .time {
+            @include flexbox();
+            
+            img {
+                @include svg();
+            }
+    
+            p {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    .footer {
+        @include flexbox();
+        margin-top: 0.75rem;
+
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            margin: 0;
+            border-radius: 50%;
+            border: 1px solid $white;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin-right: auto;
+            margin-left: 0.75rem;
+
+            span {
+                color: $white;
+                font-weight: 400;
+
+                &:hover {
+                    @include hover();
+                }
+            }
+        }
+    }
+
+}
