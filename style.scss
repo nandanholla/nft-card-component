@@ -48,7 +48,9 @@ body {
 
     background-color: $main-bg;
     color: $white;
+}
 
+main {
     @include flexbox();
 
     width: 100vw;
@@ -56,8 +58,8 @@ body {
 }
 
 .card {
-    width: 320px;
-    height: 520px;
+    width: 340px;
+    height: 560px;
 
     background-color: $card-bg;
     border-radius: 10px;
@@ -120,10 +122,10 @@ body {
                 margin-right: 0.5rem;
             }
     
-            h3 {
+            h2 {
                 color: $cyan;
                 font-weight: 400;
-                font-size: 0.9rem
+                font-size: 1rem
             }
         }
     
@@ -140,7 +142,7 @@ body {
         }
     }
 
-    .footer {
+    .content-info {
         @include flexbox();
         margin-top: 0.75rem;
 
